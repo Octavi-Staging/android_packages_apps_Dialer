@@ -33,7 +33,7 @@
   <!-- Activities and Applications should inherit from one of the themes above. -->
   <style name="Dialer.Dark.ThemeBase">
     <!-- These values should be used to color all backgrounds. -->
-    <item name="android:colorBackground">@color/google_grey_900</item>
+    <item name="android:colorBackground">@color/dndndn</item>
     <item name="android:colorBackgroundFloating">@color/google_grey_900</item>
 
     <!-- These values should be used to set text color. -->
@@ -53,7 +53,7 @@
     <item name="colorAccent">@color/dialer_dark_secondary_color</item>
 
     <!-- Used to automatically style check/selected checkbox, switches and radio buttons -->
-    <item name="colorControlActivated">?android:attr/colorPrimary</item>
+    <item name="colorControlActivated">@color/dndn</item>
 
     <!-- Dialer specific attributes. -->
     <item name="colorIcon">?android:attr/textColorSecondary</item>
