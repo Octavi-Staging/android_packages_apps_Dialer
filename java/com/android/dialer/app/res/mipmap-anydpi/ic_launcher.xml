@@ -1,19 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (c) 2018 The LineageOS Project
-
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-
-         http://www.apache.org/licenses/LICENSE-2.0
-
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
-    <background android:drawable="@mipmap/ic_launcher_phone"/>
-</adaptive-icon>
-
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:viewportWidth="100"
+    android:viewportHeight="100"
+    android:width="100dp"
+    android:height="100dp">
+    <path
+        android:pathData="M50 0H50A50 50 0 0 1 100 50V50A50 50 0 0 1 50 100H50A50 50 0 0 1 0 50V50A50 50 0 0 1 50 0Z"
+        android:fillColor="#0075FF" />
+    <path
+        android:pathData="M68.3329 64.3333C64.9996 64.3333 61.7996 63.8 58.8129 62.8133C57.8796 62.52 59.2467 60.28 58.5 61C53.5687 65.9589 45.7456 67.3877 40.687 62.5588C39.7511 61.6653 38.8584 60.727 38.0125 59.7473C34.2632 55.4046 35.421 49.0349 39.4996 45C40.2462 44.28 39.4796 44.12 39.1862 43.1867C38.1996 40.2 37.6662 37 37.6662 33.6667C37.6662 32.2 36.4662 31 34.9996 31H25.6662C24.1996 31 22 35.0333 22 36.5C22 61.54 41.96 79 67 79C68.4667 79 70.9996 77.8 70.9996 76.3333V67C70.9996 65.5333 69.7996 64.3333 68.3329 64.3333Z"
+        android:fillColor="#FFFFFF" />
+    <path
+        android:pathData="M44.333 46.6191V44.5238C44.333 43.051 45.5269 41.8571 46.9997 41.8571C48.4724 41.8571 49.6663 43.051 49.6663 44.5238V46.6191C49.6663 48.0918 48.4724 49.2857 46.9997 49.2857C45.5269 49.2857 44.333 48.0918 44.333 46.6191Z"
+        android:fillColor="#AAD1FF"
+        android:fillAlpha="0.51" />
+    <path
+        android:pathData="M65.6663 48.3333V42.6667C65.6663 41.1939 66.8602 40 68.333 40C69.8058 40 70.9997 41.1939 70.9997 42.6667V48.3333C70.9997 49.8061 69.8058 51 68.333 51C66.8602 51 65.6663 49.8061 65.6663 48.3333Z"
+        android:fillColor="#AAD1FF"
+        android:fillAlpha="0.51" />
+    <path
+        android:pathData="M55 49.6667V39.381C55 37.9083 56.1939 36.7144 57.6667 36.7144C59.1394 36.7144 60.3333 37.9083 60.3333 39.381V49.6667C60.3333 51.1395 59.1394 52.3334 57.6667 52.3334C56.1939 52.3334 55 51.1395 55 49.6667Z"
+        android:fillColor="#D4E8FF"
+        android:fillAlpha="0.57" />
+</vector>
