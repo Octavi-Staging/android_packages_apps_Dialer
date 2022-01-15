@@ -18,6 +18,7 @@ package com.android.dialer.main.impl;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import com.android.dialer.blockreportspam.ShowBlockReportSpamDialogReceiver;
@@ -31,6 +32,9 @@ import com.android.dialer.main.MainActivityPeer;
 import com.android.dialer.main.impl.bottomnav.BottomNavBar.TabIndex;
 import com.android.dialer.R;
 import com.android.dialer.util.TransactionSafeActivity;
+
+import static android.view.WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS;
+import android.content.res.Configuration;
 
 /** This is the main activity for dialer. It hosts favorites, call log, search, dialpad, etc... */
 // TODO(calderwoodra): Do not extend TransactionSafeActivity after new SpeedDial is launched
@@ -74,8 +78,17 @@ public class MainActivity extends TransactionSafeActivity
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     setTheme(R.style.MainActivityTheme);
-getWindow().setStatusBarColor(getColor(R.color.dndndn));
-getWindow().setNavigationBarColor(getColor(R.color.secondary_bg));
+    getWindow().setStatusBarColor(getColor(R.color.dndndn));
+    getWindow().setNavigationBarColor(getColor(R.color.secondary_bg));
+
+    boolean isDarkThemeOn = (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        if(isDarkThemeOn){
+            getWindow().getDecorView().getWindowInsetsController().setSystemBarsAppearance(0, APPEARANCE_LIGHT_STATUS_BARS);
+        }else{
+            getWindow().getDecorView().getWindowInsetsController().setSystemBarsAppearance(APPEARANCE_LIGHT_STATUS_BARS, APPEARANCE_LIGHT_STATUS_BARS);
+        }
+    }
 
     super.onCreate(savedInstanceState);
     LogUtil.enterBlock("MainActivity.onCreate");
