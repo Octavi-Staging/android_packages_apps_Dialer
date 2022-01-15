@@ -18,6 +18,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:background="@color/dndndn"
     android:layout_height="match_parent">
 
   <com.android.dialer.widget.DialerToolbar
@@ -29,5 +30,5 @@
       android:id="@+id/recycler_view"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:background="?android:attr/colorBackground"/>
+      android:background="@color/dndndn"/>
 </LinearLayout>

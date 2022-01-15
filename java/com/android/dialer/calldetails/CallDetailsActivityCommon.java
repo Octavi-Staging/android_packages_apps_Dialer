@@ -21,6 +21,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.CallLog;
 import android.provider.CallLog.Calls;
@@ -70,6 +71,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+
+import static android.view.WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS;
+import android.content.res.Configuration;
 
 /**
  * Contains common logic shared between {@link OldCallDetailsActivity} and {@link
@@ -122,6 +126,18 @@ abstract class CallDetailsActivityCommon extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setTheme(ThemeComponent.get(this).theme().getApplicationThemeRes());
     setContentView(R.layout.call_details_activity);
+
+    getWindow().setStatusBarColor(getColor(R.color.dndndn));
+    getWindow().setNavigationBarColor(getColor(R.color.dndndn));
+    boolean isDarkThemeOn = (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        if(isDarkThemeOn){
+            getWindow().getDecorView().getWindowInsetsController().setSystemBarsAppearance(0, APPEARANCE_LIGHT_STATUS_BARS);
+        }else{
+            getWindow().getDecorView().getWindowInsetsController().setSystemBarsAppearance(APPEARANCE_LIGHT_STATUS_BARS, APPEARANCE_LIGHT_STATUS_BARS);
+        }
+    }
+
     Toolbar toolbar = findViewById(R.id.toolbar);
     toolbar.setTitle(R.string.call_details);
     toolbar.setNavigationOnClickListener(

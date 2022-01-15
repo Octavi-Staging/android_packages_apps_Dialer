@@ -18,7 +18,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="bottom"
-    android:background="@color/dndndn"
+    android:background="@color/secondary_bg"
     android:clickable="true"
     android:elevation="0dp"
     android:layoutDirection="ltr"
