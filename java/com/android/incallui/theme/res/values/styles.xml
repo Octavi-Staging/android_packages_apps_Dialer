@@ -25,7 +25,6 @@
     <item name="android:navigationBarColor">@color/dndndn</item>
     <item name="android:windowDrawsSystemBarBackgrounds">true</item>
 
-    <item name="dialpad_key_button_touch_tint">?attr/colorPrimary20pct</item>
     <item name="dialpad_style">@style/InCallDialpad</item>
     <item name="android:windowAnimationStyle">@null</item>
 
@@ -40,7 +39,6 @@
     <item name="android:colorPrimaryDark">@color/dialer_theme_color_dark</item>
     <item name="colorPrimaryDark">@color/dialer_theme_color_dark</item>
     <item name="android:windowLightStatusBar">true</item>
-    <item name="dialpad_key_button_touch_tint">?attr/colorPrimary20pct</item>
     <item name="dialpad_style">@style/InCallDialpad</item>
   </style>
 
